@@ -2,7 +2,7 @@
 Attempt to create a normal EDK2 for MSM8909.
 
 ## Status 
-Untested, because gh actions refuses to run ffs
+Untested
 
 ## To-Do
 Get to load Windows /s
