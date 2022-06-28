@@ -1,7 +1,7 @@
-# EDK2 UEFI Firmware For Google Pixel3
-Attempt to create a normal EDK2 for Google Pixel3.
+# EDK2 UEFI Firmware For Google MSM8909
+Attempt to create a normal EDK2 for Google MSM8909.
 
-Based on zhuowei's port for [Pixel3XL](https://github.com/Pixel3Dev/edk2-pixel3/).
+Based on zhuowei's port for [MSM8909XL](https://github.com/MSM8909Dev/edk2-msm8909/).
 
 ## The Most Important
 DO NOT FLASH THIS UEFI FIRMWARE IN YOUR MAIN PHONE !!!
@@ -9,7 +9,7 @@ DO NOT FLASH THIS UEFI FIRMWARE IN YOUR MAIN PHONE !!!
 It's very unstable and you may lost your data.
 
 ## Show
-![image](https://github.com/sunshuyu/edk2-Pixel3/blob/main/Pictures/PE.jpg) 
+![image](https://github.com/sunshuyu/edk2-MSM8909/blob/main/Pictures/PE.jpg) 
 
 ## Status 
  UFS WORK！
@@ -40,7 +40,7 @@ Ubuntu 20.04:
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install build-essential uuid-dev iasl git nasm gcc-aarch64-linux-gnu abootimg python3-distutils python3-pil python3-git
+sudo apt install build-essential uuid-dev iasl git nasm gcc-ARM-linux-gnu abootimg python3-distutils python3-pil python3-git
 ```
 
 
@@ -61,12 +61,12 @@ commit:cfdc7f907d545b14302295b819ea078bc36c6a40
 
 2.Clone this project
 ```
-git clone https://github.com/sunshuyu/edk2-pixel3.git
+git clone https://github.com/sunshuyu/edk2-msm8909.git
 ```
 
 3.Build environment
 ```
-cd edk2-pixel3
+cd edk2-msm8909
 ```
 
 4.Build this project
