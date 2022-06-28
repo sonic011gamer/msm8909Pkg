@@ -26,28 +26,27 @@ ARM_CORE_INFO mHiKey960InfoTable[] = {
 
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-        
+    {        
         // Cluster 0, Core 1
         0x001,
 
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-      },
-      {
+    },
+    {
         // Cluster 0, Core 2
         0x002,
 
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-      },
-      {
+    },
+    {
         // Cluster 0, Core 3
         0x003,
 
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-      }
-      */
+    }
 };
 
 /**
