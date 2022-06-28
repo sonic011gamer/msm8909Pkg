@@ -36,7 +36,7 @@
 [Sources.common]
   MSM8909Pkg.c
   MSM8909PkgHelper.S
-  MSM8909MemPkg.c
+  MSM8909PkgMem.c
 
 [FixedPcd]
   gArmTokenSpaceGuid.PcdArmPrimaryCore
