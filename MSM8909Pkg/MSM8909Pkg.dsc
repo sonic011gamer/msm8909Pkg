@@ -210,7 +210,7 @@
   #
   # MSM8909 necessary driver execution environment
   #
-  MSM8909Pkg/Drivers/MSM8909Dxe/MSM8909Dxe.inf
+  MSM8909Pkg/Drivers/MSM8909PkgDxe/MSM8909PkgDxe.inf
   MSM8909Pkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
   MSM8909Pkg/Drivers/LogoDxe/LogoDxe.inf
 
