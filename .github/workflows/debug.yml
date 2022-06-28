@@ -26,6 +26,7 @@ jobs:
         git clone https://github.com/Tianocore/edk2.git --recursive --depth=1
         git clone https://github.com/sonic011gamer/MSM8909Pkg.git --depth=1
         git clone https://github.com/tianocore/edk2-platforms.git --depth=1
+        
     - name: Build BaseTools
       run: |
         cd /home/runner/work/edk2stuff/edk2
