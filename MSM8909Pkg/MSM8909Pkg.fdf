@@ -185,7 +185,7 @@ APRIORI DXE {
   #
   INF EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
-  INF MSM8909Pkg/Drivers/MSM8909Dxe/MSM8909Dxe.inf
+  INF MSM8909Pkg/Drivers/MSM8909PkgDxe/MSM8909PkgDxe.inf
   INF MSM8909Pkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
 
   #

@@ -34,7 +34,7 @@
 #include <Protocol/LoadedImage.h>
 #include <Protocol/PlatformBootManager.h>
 
-#include "MSM8909Dxe.h"
+#include "MSM8909PkgDxe.h"
 
 EFI_CPU_ARCH_PROTOCOL     *gCpu;
 
