@@ -24,7 +24,7 @@
   SUPPORTED_ARCHITECTURES        = ARM
   BUILD_TARGETS                  = DEBUG|RELEASE
   SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = MSM8909Pkg/blueline.fdf
+  FLASH_DEFINITION               = MSM8909Pkg/MSM8909Pkg.fdf
 
 !include MSM8909Pkg/CommonDsc.dsc.inc
 
