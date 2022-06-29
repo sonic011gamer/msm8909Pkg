@@ -18,13 +18,14 @@
 .align 3
 
 ASM_FUNC(ArmPlatformPeiBootAction)
+  bx lr
 startlabel:
   // check if we're located at expected location
   adr	r4, .
   ldr	r5, =ArmPlatformPeiBootAction
   cmp	r4, r5
-  bne	docopy
-  bx   lr
+  bne docopy
+  bx lr
 docopy:
   // find our start address by getting our expected offset, then subtracting it from our actual address
   ldr	r6, =FixedPcdGet64 (PcdFdBaseAddress)
@@ -56,22 +57,22 @@ loop:
 //  );
 ASM_FUNC(ArmPlatformIsPrimaryCore)
   MOV32 (r1, FixedPcdGet32(PcdArmPrimaryCoreMask))
-  and   r0, r0, r1
+  and r0, r0, r1
 
   LDRL (r1, FixedPcdGet32(PcdArmPrimaryCore))
 
   cmp   r0, r1
   moveq r0, #1
   movne r0, #0
-  bx    lr
+  bx lr
 
 //UINTN
 //ArmPlatformGetPrimaryCoreMpId (
 //  VOID
 //  );
 ASM_FUNC(ArmPlatformGetPrimaryCoreMpId)
-  LDRL  (r0, PrimaryCoreMpid)
-  bx    lr
+  LDRL (r0, PrimaryCoreMpid)
+  bx lr
 
 //UINTN
 //ArmPlatformGetCorePosition (
@@ -79,7 +80,7 @@ ASM_FUNC(ArmPlatformGetPrimaryCoreMpId)
 //  );
 // With this function: CorePos = (ClusterId * 4) + CoreId
 ASM_FUNC(ArmPlatformGetCorePosition)
-  and   r1, r0, #ARM_CORE_MASK
-  and   r0, r0, #ARM_CLUSTER_MASK
-  add   r0, r1, r0, LSR #7
-  bx    lr
+  and r1, r0, #ARM_CORE_MASK
+  and r0, r0, #ARM_CLUSTER_MASK
+  add r0, r1, r0, LSR #7
+  bx lr
