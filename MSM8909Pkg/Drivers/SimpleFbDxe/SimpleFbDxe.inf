@@ -9,8 +9,8 @@
   ENTRY_POINT                    = SimpleFbDxeInitialize
 
 [BuildOptions.ARM]
-  GCC:*_*_*_CC_FLAGS = -Wno-pointer-to-int-cast -Wno-overflow
-  
+  GCC:*_*_*_CC_FLAGS = -Wno-pointer-to-int-cast -Wno-overflow -Wno-int-to-pointer-cast
+
 [Sources.common]
   SimpleFbDxe.c
 
