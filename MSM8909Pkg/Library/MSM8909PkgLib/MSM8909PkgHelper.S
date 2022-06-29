@@ -26,7 +26,7 @@ ASM_FUNC(ArmPlatformPeiBootAction)
   bx lr
 docopy:
   // find our start address by getting our expected offset, then subtracting it from our actual address
-  ldr r6, =FixedPcdGet64 (PcdFdBaseAddress)
+  ldr r6, 0xBCC00000
   sub r5, r5, r6 // r5 now holds offset of ArmPlatformPeiBootAction from start of FD base
   sub r4, r4, r5 // r4 now holds address of actual FD base
 
