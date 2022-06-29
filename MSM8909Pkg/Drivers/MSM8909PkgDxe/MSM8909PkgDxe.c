@@ -79,7 +79,7 @@ OnEndOfDxe (
 
 EFI_STATUS
 EFIAPI
-MSM8909EntryPoint (
+MSM8909PkgEntryPoint (
   IN EFI_HANDLE         ImageHandle,
   IN EFI_SYSTEM_TABLE   *SystemTable
   )

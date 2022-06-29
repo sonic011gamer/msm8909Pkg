@@ -12,7 +12,7 @@
 *
 **/
 
-#ifndef __MSM8909DXE_H__
-#define __MSM8909DXE_H__
+#ifndef __MSM8909PKGDXE_H__
+#define __MSM8909PKGDXE_H__
 
-#endif /* __MSM8909DXE_H__ */
+#endif /* __MSM8909PKGDXE_H__ */
