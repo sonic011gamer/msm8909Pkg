@@ -27,36 +27,56 @@ ARM_CORE_INFO mHiKey960InfoTable[] = {
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
     },
-    {        
+    /*
+      {
         // Cluster 0, Core 1
-        0x001,
-
+        0x001
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-    },
-    {
+      },
+      {
         // Cluster 0, Core 2
         0x002,
-
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-    },
-    {
+      },
+      {
         // Cluster 0, Core 3
         0x003,
-
         // MP Core MailBox Set/Get/Clear Addresses and Clear Value
         (UINT64)0xFFFFFFFF
-    }
+      },
+      {
+        // Cluster 1, Core 0
+        0x1, 0x0,
+        // MP Core MailBox Set/Get/Clear Addresses and Clear Value
+        (UINT64)0xFFFFFFFF
+      },
+      {
+        // Cluster 1, Core 1
+        0x1, 0x1,
+        // MP Core MailBox Set/Get/Clear Addresses and Clear Value
+        (UINT64)0xFFFFFFFF
+      },
+      {
+        // Cluster 1, Core 2
+        0x1, 0x2,
+        // MP Core MailBox Set/Get/Clear Addresses and Clear Value
+        (UINT64)0xFFFFFFFF
+      },
+      {
+        // Cluster 1, Core 3
+        0x1, 0x3,
+        // MP Core MailBox Set/Get/Clear Addresses and Clear Value
+        (UINT64)0xFFFFFFFF
+      }
+    */
 };
 
 /**
   Return the current Boot Mode
-
   This function returns the boot reason on the platform
-
   @return   Return the current Boot Mode of the platform
-
 **/
 EFI_BOOT_MODE
 ArmPlatformGetBootMode (
@@ -67,10 +87,8 @@ ArmPlatformGetBootMode (
 
 /**
   Initialize controllers that must setup in the normal world
-
   This function is called by the ArmPlatformPkg/Pei or ArmPlatformPkg/Pei/PlatformPeim
   in the PEI phase.
-
 **/
 RETURN_STATUS
 ArmPlatformInitialize (
