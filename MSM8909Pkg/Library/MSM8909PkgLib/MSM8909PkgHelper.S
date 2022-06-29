@@ -21,34 +21,34 @@ ASM_FUNC(ArmPlatformPeiBootAction)
   bx lr
 startlabel:
   // check if we're located at expected location
-  adr	r4, .
-  ldr	r5, =ArmPlatformPeiBootAction
-  cmp	r4, r5
+  adr r4, .
+  ldr r5, =ArmPlatformPeiBootAction
+  cmp r4, r5
   bne docopy
   bx lr
 docopy:
   // find our start address by getting our expected offset, then subtracting it from our actual address
-  ldr	r6, =FixedPcdGet64 (PcdFdBaseAddress)
-  sub	r5, r5, r6 // r5 now holds offset of ArmPlatformPeiBootAction from start of FD base
-  sub	r4, r4, r5 // r4 now holds address of actual FD base
+  ldr r6, =FixedPcdGet64 (PcdFdBaseAddress)
+  sub r5, r5, r6 // r5 now holds offset of ArmPlatformPeiBootAction from start of FD base
+  sub r4, r4, r5 // r4 now holds address of actual FD base
   // tweak the return address
   // note: r14 is lr; gcc5 doesn't have the alias (*doubt*)
-  sub	r14, r14, r4
-  add	r14, r14, r6
-  ldr	r5, =FixedPcdGet64 (PcdFdSize)
+  sub r14, r14, r4
+  add r14, r14, r6
+  ldr r5, =FixedPcdGet64 (PcdFdSize)
   // crap memcpy
 loop:
-  //ldp	r2, r3, [r4], #16   //Calculates address from r4 and 16 offset then loads into r2 and r3 and copies the value back
-  //stp	r2, r3, [r6], #16   //Stores into r2 and r3 value from r6(PcdFdBaseAddress) [16 bit memcpy?]
-  //subs	r5, r5, #16       // r5 - 16bit and store into r5
-  //b.ne	loop                //if the r5 - 16bytes isn't equal to r5(ArmPlatformPeiBootAction) then loop again
-  //bx    lr                //exit loop
+  //ldp r2, r3, [r4], #16   //Calculates address from r4 and 16 offset then loads into r2 and r3 and copies the value back
+  //stp r2, r3, [r6], #16   //Stores into r2 and r3 value from r6(PcdFdBaseAddress) [16 bit memcpy?]
+  //subs r5, r5, #16       // r5 - 16bit and store into r5
+  //b.ne loop                //if the r5 - 16bytes isn't equal to r5(ArmPlatformPeiBootAction) then loop again
+  //bx lr                //exit loop
 
-  ldr		r3, [r4], #16       //Load FD Address into r3 probably with a 16bit offset?
-	str		r3, [r6], #16       //store into r3 the value from r6, memcpy most likely lol
-	subs	r5, r5, #16         //substract 16bits from r5?
-	bne		loop                //branch greater
-	bx lr
+  ldr r3, [r4], #16       //Load FD Address into r3 probably with a 16bit offset?
+  str r3, [r6], #16       //store into r3 the value from r6, memcpy most likely lol
+  subs r5, r5, #16         //substract 16bits from r5?
+  bne  loop                //branch greater
+  bx lr
 .ltorg
 
 //UINTN
