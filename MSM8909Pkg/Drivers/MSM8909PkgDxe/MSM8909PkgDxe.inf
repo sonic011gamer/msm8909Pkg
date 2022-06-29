@@ -12,7 +12,7 @@
 
 [Defines]
   INF_VERSION                    = 0x0001001a
-  BASE_NAME                      = F11Dxe
+  BASE_NAME                      = MSM8909Pkg
   FILE_GUID                      = 422BB380-0FFB-41EC-B86E-AE70F8A02DA3
   MODULE_TYPE                    = DXE_DRIVER
   VERSION_STRING                 = 1.0
